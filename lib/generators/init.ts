@@ -1,4 +1,5 @@
 import * as commander from "commander";
+import {ETemplateType, FileManager} from "../file-manager";
 
 commander
     .command('init <appName>')
@@ -7,5 +8,6 @@ commander
     });
 
 function initApp(appName: any) {
-    console.log('initApp', appName, process.cwd())
+    let fileManager = new FileManager();
+    console.info('initApp', appName, fileManager.readTemplate(ETemplateType.PACKAGE_JSON, appName));
 }
