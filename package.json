@@ -1,0 +1,31 @@
+{
+  "name": "rest-builder",
+  "version": "1.0.0",
+  "description": "Command-line builder for rest api backend",
+  "preferGlobal": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "rest-builder": "./dist/index.js"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "express",
+    "typescript"
+  ],
+  "author": "Skoropad Aleksandr",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.12.2"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.48",
+    "typescript": "^2.6.2"
+  }
+}
